@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class App {
+    SALIR:
     public static void main(String[] args){
         System.out.println("|-------------------|");
         System.out.println("    CALCULADORA     ");
@@ -23,8 +24,8 @@ public class App {
                     break;
                 case 4:multiplicar();
                     break;
-                case 5:
-                    System.out.println("saliendo");
+                case 5: System.out.println("Saliendo de la CALCULADORA");
+                    break SALIR;
             
                 default: System.out.println("opcion incorrecta");
                     
