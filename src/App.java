@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class App {
-    SALIR:
     public static void main(String[] args){
         System.out.println("|-------------------|");
         System.out.println("    CALCULADORA     ");
@@ -15,20 +14,24 @@ public class App {
         );
         try (Scanner sc = new Scanner(System.in)) {
             int op = sc.nextInt();
-            switch (op) {
-                case 1: restar();
+            SALIR:
+            while(true){
+
+                switch (op) {
+                    case 1: restar();
                     break;
-                case 2: sumar();
+                    case 2: sumar();
                     break;
-                case 3:dividir();
+                    case 3:dividir();
                     break;
-                case 4:multiplicar();
+                    case 4:multiplicar();
                     break;
-                case 5: System.out.println("Saliendo de la CALCULADORA");
+                    case 5: System.out.println("Saliendo de la CALCULADORA");
                     break SALIR;
-            
-                default: System.out.println("opcion incorrecta");
                     
+                    default: System.out.println("opcion incorrecta");
+                    
+                }
             }
         }
 
